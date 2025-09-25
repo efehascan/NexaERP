@@ -2,9 +2,11 @@
   "name": "NexaERP",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/server.js",
   "scripts": {
-    "build": "tsc"
+    "dev": "ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -17,6 +19,7 @@
     "@types/bcrypt": "^6.0.0",
     "@types/express": "^5.0.3",
     "@types/jsonwebtoken": "^9.0.10",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.3"
   },
   "private": true
