@@ -1,15 +1,12 @@
 ﻿import express from "express";
-
+import authRoutes from "./routes/authRoutes";
+import userRoutes from "./routes/userRoutes";
 
 const app = express();
 
-// Middleware
 app.use(express.json());
 
-
-// Health Check
-app.get("/", (req, res) => {
-    res.json({ message: "ERP API running" });
-});
+app.use("/auth", authRoutes);
+app.use("/users", userRoutes);
 
 export default app;
