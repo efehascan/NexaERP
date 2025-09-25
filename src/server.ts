@@ -5,7 +5,7 @@ import { env } from "./config/env";
 
 AppDataSource.initialize()
     .then(() => {
-        console.log("✅ Database connected");
+        console.log("Database connected");
 
         app.listen(env.PORT, () => {
             console.log(
